@@ -1,0 +1,15 @@
+sudo apt install postfix
+sudo dpkg-reconfigure postfix
+sudo systemctl restart postfix
+sudo apt install mailutils -y
+sudo nano /etc/postfix/sasl/sasl_passwd
+ls /etc/postfix/sasl/
+sudo postmap /etc/postfix/sasl/sasl_passwd
+sudo chmod 600 /etc/postfix/sasl/sasl_passwd
+sudo chmod 600 /etc/postfix/sasl/sasl_passwd.db
+sudo nano /etc/postfix/main.cf
+sudo systemctl restart postfix
+sudo systemctl enable postfix
+sudo systemctl start postfix
+echo "Prueba" | mail -s "Prueba" josebonillaechavarria@gmail.com
+echo "José Enmanuel Bonilla Echavarria (20240789)" | mail -s "Mambrú se fue a la Guerra" os3conadrian@gmail.com
