@@ -1,0 +1,14 @@
+sudo apt update 
+sudo apt install cups
+sudo systemctl enable cups
+sudo systemctl start cups
+sudo ufw allow 631/tcp
+sudo systemctl restart ufw
+cups --remote-admin --remote-any --share-printers
+sudo systemctl status cups
+sudo apt install cups-pdf
+cd
+ls
+cd PDF
+ls
+LibreOffice (inserte el nombre de la página)
