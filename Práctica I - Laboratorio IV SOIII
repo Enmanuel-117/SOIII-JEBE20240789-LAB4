@@ -1,0 +1,19 @@
+sudo apt get update
+sudo apt install apache2 -y
+cd /var/www/html
+ls
+sudo nano index.html
+sudo mkdir helloworld.com
+ls
+cd helloworld.html
+cd
+cd /etc/apache2/sites-available
+
+sudo cp 000-default.conf helloworld.conf
+sudo nano helloworld.conf
+sudo apache a2ensite helloworld.conf
+sudo a2dissite 000-default.conf
+
+
+****Repetir el proceso con la siguiente parte de la práctica****
+sudo nano ports.conf (añadir el 8080)
